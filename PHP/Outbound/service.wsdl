@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<definitions name="CustomerCredit" 
+    targetNamespace="urn:CustomerCredit" 
+    xmlns:tns="urn:CustomerCredit"  
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:s="http://www.w3.org/2001/XMLSchema">
+
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:CustomerCredit">
+        <s:element name="MyString">
+            <s:complexType>
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="MyString" type="s:string"/>
+                </s:sequence>
+            </s:complexType>
+        </s:element>
+    </s:schema>
+  </types>  
+    
+  <message name="CustomerCreditStatusRequest">
+    <part name="parameters" element="tns:MyString" />
+  </message>
+  
+  <message name="CustomerCreditStatusResponse">
+    <part name="parameters" element="tns:MyString" />
+  </message>  
+  
+  <portType name="CustomerCreditServicePort">
+    <operation name="GetCustomerCreditStatus">
+      <input message="tns:CustomerCreditStatusRequest" />
+      <output message="tns:CustomerCreditStatusResponse" />
+    </operation>
+  </portType>
+  
+  <binding name="CustomerCreditBinding" type="tns:CustomerCreditServicePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+      <operation name="GetCustomerCreditStatus">
+        <soap:operation soapAction="urn:GetCustomerCreditStatus" />
+        <input>
+          <soap:body use="literal" namespace="urn:CustomerCredit" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />          
+        </input>
+        <output>
+          <soap:body use="literal" namespace="urn:CustomerCredit" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />          
+        </output>
+      </operation>
+  </binding>
+  
+  <service name="CustomerCreditService">
+    <port name="CustomerCreditServicePort" binding="tns:CustomerCreditBinding">
+      <soap:address location="http://df13-php.4front.se/Outbound/service.php" />
+    </port>
+  </service>
+    
+</definitions>

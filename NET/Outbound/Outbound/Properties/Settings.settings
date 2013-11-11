@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NETCustomerStatus.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Outbound_SforceService_SforceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://login.salesforce.com/services/Soap/c/28.0</Value>
+    </Setting>
+    <Setting Name="Outbound_ApexTracker_TrackerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://eu2.salesforce.com/services/Soap/class/Tracker</Value>
+    </Setting>
+    <Setting Name="Outbound_ApexWS_TrackerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://eu2.salesforce.com/services/Soap/class/Tracker</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

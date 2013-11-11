@@ -1,0 +1,5 @@
+C:\Dev\DF13\NET\Outbound\Outbound\bin\Outbound.dll
+C:\Dev\DF13\NET\Outbound\Outbound\bin\Outbound.pdb
+C:\Dev\DF13\NET\Outbound\Outbound\obj\Debug\Outbound.dll
+C:\Dev\DF13\NET\Outbound\Outbound\obj\Debug\Outbound.pdb
+C:\Dev\DF13\NET\Outbound\Outbound\obj\Debug\Outbound.csprojResolveAssemblyReference.cache
